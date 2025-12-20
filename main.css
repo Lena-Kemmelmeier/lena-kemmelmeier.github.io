@@ -57,3 +57,19 @@ a:hover {
 .icons a:hover {
     color: #1565c0;
 }
+
+/* Force background override (GitHub Pages themes often set bg on wrappers) */
+:root,
+html,
+body,
+main,
+header,
+footer,
+#content,
+.wrapper,
+.container,
+.page-content,
+.site,
+.site-content {
+  background-color: #daeaf2 !important;
+}
