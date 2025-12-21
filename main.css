@@ -39,12 +39,12 @@ a:hover {
 
 h1 {
   margin: 0;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.10rem;
 }
 
 /* Pronouns: size in REM so it doesn't inherit huge h1 sizing */
 .pronouns {
-  font-size: 0.9rem;     /* smaller than body */
+  font-size: 1.05rem;     /* smaller than body */
   font-weight: 300;
   opacity: 0.7;
   margin-bottom: 1.25rem;
