@@ -44,7 +44,6 @@ h1 {
 
 /* Pronouns: size in REM so it doesn't inherit huge h1 sizing */
 .pronouns {
-  font-size: 1.05rem;     /* smaller than body */
   font-weight: 300;
   opacity: 0.7;
   margin-bottom: 1.25rem;
