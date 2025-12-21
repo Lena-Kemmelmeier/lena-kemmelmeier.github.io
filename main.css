@@ -37,19 +37,22 @@ a:hover {
   margin: 0 auto 1rem auto;
 }
 
+/* Name */
 h1 {
   margin: 0;
-  margin-bottom: 0.10rem;
+  line-height: 1.2;
 }
 
-/* Pronouns: size in REM so it doesn't inherit huge h1 sizing */
+/* Pronouns BELOW name */
 .pronouns {
-  font-size: inherit;
+  font-size: 1.05rem;          /* same as body text */
   font-weight: 300;
   opacity: 0.7;
-  white-space: nowrap;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 
+/* Icons */
 .icons {
   list-style-type: none;
   font-size: xx-large;
