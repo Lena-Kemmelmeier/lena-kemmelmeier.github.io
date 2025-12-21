@@ -1,75 +1,96 @@
-html, body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: larger;
-    font-weight: 300;
-    background-color: #daeaf2;
-    margin: 0;
-    padding: 0;
+/* Global page styling */
+html,
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: larger;
+  font-weight: 300;
+  background-color: #daeaf2;
+  margin: 0;
+  padding: 0;
 }
 
+/* Links */
 a {
-    text-decoration: none;
-    color: #1565c0;
+  text-decoration: none;
+  color: #1565c0;
 }
 
 a:hover {
-    color: #217ee7;
+  color: #217ee7;
 }
 
+/* Centered content container */
 #content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    max-width: 520px;
-    padding: 32px;
-    line-height: 1.6em;
-    background-color: transparent; /* important if a template injected a bg */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 520px;
+  padding: 32px;
+  line-height: 1.6em;
+  background-color: transparent;
 }
 
+/* Avatar */
 .avatar {
-    width: 180px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
+/* Terminal-style block */
+.terminal {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  background-color: #0f1115;
+  color: #e6e6e6;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  text-align: left;
+  line-height: 1.6;
+  margin: 1.5rem auto;
+}
 
+.terminal .prompt {
+  color: #f0c674;
+}
 
+/* Icon row */
 .icons {
-    list-style-type: none;
-    font-size: xx-large;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 320px;
-    margin: 1em auto;
+  list-style-type: none;
+  font-size: xx-large;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 320px;
+  margin: 1em auto;
 }
 
 .icons li {
-    display: inline;
-    width: 42px;
+  display: inline;
+  width: 42px;
 }
 
 .icons a {
-    color: black;
+  color: black;
 }
 
 .icons a:hover {
-    color: #1565c0;
+  color: #1565c0;
 }
 
-/* Force background override (GitHub Pages themes often set bg on wrappers) */
+/* GitHub Pages / theme override safety net */
 :root,
 html,
 body,
 main,
 header,
 footer,
-#content,
 .wrapper,
 .container,
 .page-content,
