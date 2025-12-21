@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.05rem;
   font-weight: 400;
@@ -8,26 +7,31 @@ body {
   padding: 0;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: #1565c0;
 }
-
 a:hover {
   color: #217ee7;
 }
 
+/* Centered content */
 #content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  max-width: 520px;
+
+  /* Wider so your name can fit on one line on most screens */
+  width: min(900px, 92vw);
+
   padding: 32px;
   line-height: 1.7;
 }
 
+/* Avatar */
 .avatar {
   width: 180px;
   height: 220px;
@@ -37,32 +41,41 @@ a:hover {
   margin: 0 auto 1rem auto;
 }
 
-/* NAME: keep it on one line on desktop */
-.name {
+/* Name */
+h1.name {
   margin: 0;
+
+  /* Controlled, consistent size across browsers */
+  font-size: clamp(2.1rem, 5.2vw, 3.2rem);
   line-height: 1.15;
-  font-weight: 500;
-  font-size: clamp(2.3rem, 5.2vw, 3.6rem);
+
+  /* Keep it one line when there's room, wrap when not */
   white-space: nowrap;
 }
 
-/* PRONOUNS: clearly larger than body, below name */
-.pronouns {
-  margin-top: 0.35rem;
-  margin-bottom: 1.25rem;
-  font-weight: 300;
-  opacity: 0.75;
-  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  line-height: 1.2;
-}
-
-/* On small screens, allow the name to wrap (prevents overflow) */
+/* On small screens, allow wrapping so it doesn't overflow */
 @media (max-width: 520px) {
-  .name {
+  h1.name {
     white-space: normal;
   }
 }
 
+/* Pronouns */
+.pronouns {
+  /* Make them noticeably bigger than before */
+  font-size: 1.35rem;  /* <- change this if you want even bigger */
+  font-weight: 300;
+  opacity: 0.7;
+  margin-top: 0.35rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Paragraph spacing */
+p {
+  margin: 0 0 1.2rem 0;
+}
+
+/* Icons */
 .icons {
   list-style-type: none;
   font-size: xx-large;
@@ -70,7 +83,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  max-width: 320px;
+  max-width: 360px;
   margin: 1.25em auto 0 auto;
 }
 
