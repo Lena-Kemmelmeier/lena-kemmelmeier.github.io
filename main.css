@@ -1,3 +1,4 @@
+/* GLOBAL */
 html, body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.05rem;
@@ -22,14 +23,19 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  /* this keeps everything visually centered */
   text-align: center;
 
-  /* Give the title room to stay on one line */
-  width: min(92vw, 900px);
-  max-width: 900px;
+  /* give the title room but don’t let it go full-screen wide */
+  width: min(92vw, 760px);
 
   padding: 32px;
   line-height: 1.7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Avatar */
@@ -39,47 +45,43 @@ a:hover {
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  margin: 0 auto 1rem auto;
+  margin: 0 0 1.25rem 0;
 }
 
-/* Name */
+/* NAME (make it smaller + centered) */
 h1.name {
   margin: 0;
 
-  /* Smaller + stable across screens (no giant vw scaling) */
-  font-size: 2.4rem;
-  line-height: 1.15;
+  /* ↓↓↓ THIS is the main change: smaller clamp range */
+  font-size: clamp(1.7rem, 3.6vw, 2.4rem);
 
-  /* Centering + safer wrapping behavior */
-  display: inline-block;
-  max-width: 100%;
+  line-height: 1.15;
   text-align: center;
 
-  /* Keep on one line if it fits; otherwise it will wrap */
+  /* keep on one line when there’s room */
   white-space: nowrap;
 }
 
-/* If the screen is narrow, allow wrapping */
+/* On small screens, allow wrapping so it doesn't overflow */
 @media (max-width: 700px) {
   h1.name {
     white-space: normal;
-    font-size: 2.1rem;
   }
 }
 
-/* Pronouns BELOW name (bigger than your body text) */
+/* Pronouns BELOW name (bigger than before, but still lighter) */
 .pronouns {
-  font-size: 1.35rem;
+  font-size: 1.35rem;   /* bump this up if you want even larger */
   font-weight: 300;
   opacity: 0.7;
-  margin-top: 0.35rem;
-  margin-bottom: 1.2rem;
+  margin-top: 0.45rem;
+  margin-bottom: 1.3rem;
 }
 
-/* Paragraph spacing */
+/* Paragraph */
 p {
-  margin: 0 auto 1.2rem auto;
-  max-width: 720px;
+  margin: 0 0 1.2rem 0;
+  max-width: 52ch;   /* keeps lines readable + centered */
 }
 
 /* Icons */
@@ -89,9 +91,9 @@ p {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  max-width: 360px;
-  margin: 1.25em auto 0 auto;
+
+  width: min(80%, 360px);
+  margin: 1.25rem auto 0 auto;
 }
 
 .icons li {
