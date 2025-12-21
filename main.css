@@ -43,16 +43,24 @@ h1 {
   line-height: 1.2;
 }
 
-/* Pronouns BELOW name */
+/* Pronouns below name (NOT inside h1) */
 .pronouns {
-  font-size: 1.05rem;          /* same as body text */
-  font-weight: 300;
-  opacity: 0.7;
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   margin-bottom: 1.25rem;
+  font-weight: 400;
+  opacity: 0.75;
+  white-space: nowrap;
+
+  /* Make it "not tiny" relative to the big heading:
+     this scales with your h1 size visually */
+  font-size: 0.55em;
 }
 
-/* Icons */
+/* If you want it EVEN BIGGER, try one of these:
+.pronouns { font-size: 0.65em; }
+.pronouns { font-size: 0.75em; }
+*/
+
 .icons {
   list-style-type: none;
   font-size: xx-large;
