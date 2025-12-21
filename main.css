@@ -52,12 +52,9 @@ a:hover {
 h1.name {
   margin: 0;
 
-  /* ↓↓↓ THIS is the main change: smaller clamp range */
-  font-size: clamp(1.7rem, 3.6vw, 2.1rem);
-
+  font-size: 2rem;
   line-height: 1.15;
   text-align: center;
-
   /* keep on one line when there’s room */
   white-space: nowrap;
 }
