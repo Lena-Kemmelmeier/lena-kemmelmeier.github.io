@@ -24,8 +24,9 @@ a:hover {
   transform: translate(-50%, -50%);
   text-align: center;
 
-  /* Wider so your name can fit on one line on most screens */
-  max-width: 520px;
+  /* Give the title room to stay on one line */
+  width: min(92vw, 900px);
+  max-width: 900px;
 
   padding: 32px;
   line-height: 1.7;
@@ -45,25 +46,30 @@ a:hover {
 h1.name {
   margin: 0;
 
-  /* Controlled, consistent size across browsers */
-  font-size: clamp(2.1rem, 5.2vw, 3.2rem);
+  /* Smaller + stable across screens (no giant vw scaling) */
+  font-size: 2.4rem;
   line-height: 1.15;
 
-  /* Keep it one line when there's room, wrap when not */
+  /* Centering + safer wrapping behavior */
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+
+  /* Keep on one line if it fits; otherwise it will wrap */
   white-space: nowrap;
 }
 
-/* On small screens, allow wrapping so it doesn't overflow */
-@media (max-width: 520px) {
+/* If the screen is narrow, allow wrapping */
+@media (max-width: 700px) {
   h1.name {
     white-space: normal;
+    font-size: 2.1rem;
   }
 }
 
-/* Pronouns */
+/* Pronouns BELOW name (bigger than your body text) */
 .pronouns {
-  /* Make them noticeably bigger than before */
-  font-size: 1.35rem;  /* <- change this if you want even bigger */
+  font-size: 1.35rem;
   font-weight: 300;
   opacity: 0.7;
   margin-top: 0.35rem;
@@ -72,7 +78,8 @@ h1.name {
 
 /* Paragraph spacing */
 p {
-  margin: 0 0 1.2rem 0;
+  margin: 0 auto 1.2rem auto;
+  max-width: 720px;
 }
 
 /* Icons */
