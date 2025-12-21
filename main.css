@@ -66,12 +66,14 @@ a:hover {
   color: #1565c0;
 }
 
-.pronouns {
-  font-size: 0.20em;
+/* Pronouns inside heading */
+h1 .pronouns {
+  font-size: 0.6em;      /* 60% of h1 size */
   font-weight: 300;
   opacity: 0.75;
+  margin-left: 0.3em;
+  vertical-align: middle;
 }
-
 
 /* GitHub Pages background override */
 :root,
