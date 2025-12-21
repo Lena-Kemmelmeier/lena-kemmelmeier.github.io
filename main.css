@@ -38,7 +38,7 @@ a:hover {
   align-items: center;
 }
 
-/* Avatar */
+/* Avatar 
 .avatar {
   width: 180px;
   height: 220px;
@@ -46,6 +46,12 @@ a:hover {
   border-radius: 8px;
   display: block;
   margin: 0 0 1.25rem 0;
+}
+*/
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
 }
 
 /* NAME (make it smaller + centered) */
