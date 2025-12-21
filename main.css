@@ -38,14 +38,17 @@ a:hover {
 }
 
 h1 {
-  margin-bottom: 1.25rem;
+  margin: 0;
+  margin-bottom: 0.35rem;
 }
 
+/* Pronouns: size in REM so it doesn't inherit huge h1 sizing */
 .pronouns {
-  font-size: 0.75em;
+  font-size: 0.9rem;     /* smaller than body */
   font-weight: 300;
   opacity: 0.7;
-  nowrap;
+  margin-bottom: 1.25rem;
+  white-space: nowrap;
 }
 
 .icons {
