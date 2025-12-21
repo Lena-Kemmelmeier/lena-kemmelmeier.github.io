@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.05rem;
   font-weight: 400;
@@ -37,29 +36,28 @@ a:hover {
   margin: 0 auto 1rem auto;
 }
 
-/* Name */
-h1 {
+/* Name on one line (when possible) */
+.name {
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
-/* Pronouns below name (NOT inside h1) */
+/* Pronouns BELOW name, not tiny */
 .pronouns {
-  margin-top: 0.35rem;
-  margin-bottom: 1.25rem;
+  font-size: 1.25rem;   /* <- bump this if you want even bigger */
   font-weight: 400;
   opacity: 0.75;
-  white-space: nowrap;
-
-  /* Make it "not tiny" relative to the big heading:
-     this scales with your h1 size visually */
-  font-size: 0.55em;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 
-/* If you want it EVEN BIGGER, try one of these:
-.pronouns { font-size: 0.65em; }
-.pronouns { font-size: 0.75em; }
-*/
+/* Let name wrap on small screens so it doesn't overflow */
+@media (max-width: 520px) {
+  .name {
+    white-space: normal;
+  }
+}
 
 .icons {
   list-style-type: none;
@@ -68,7 +66,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  max-width: 320px;
+  max-width: 360px;
   margin: 1.25em auto 0 auto;
 }
 
