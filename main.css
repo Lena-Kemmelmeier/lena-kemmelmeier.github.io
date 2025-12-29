@@ -11,13 +11,13 @@ html, body {
 
 /* Links */
 a {
-  color: #4b5563;          /* lighter than body text */
+  color: #8b5e3c;          /* warm brown */
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: #c26a2e;          /* warm orange from image */
+  color: #c26a2e;          /* warmer orange on hover */
 }
 
 /* Centered content */
@@ -44,7 +44,7 @@ a:hover {
 .avatar {
   width: 200px;
   object-fit: cover;
-  border-radius: 5%;
+  border-radius: 5%; /* makes it circular */
   display: block;
   margin: 0 auto 1rem auto;
 }
@@ -56,6 +56,7 @@ h1.name {
   line-height: 1.15;
   margin-top: 0.45rem;
   text-align: center;
+  /* keep on one line when there’s room */
   white-space: nowrap;
   color: #1f2933;
 }
@@ -68,18 +69,18 @@ h1.name {
 }
 
 .pronouns {
-  font-size: 1.35rem;
+  font-size: 1.35rem;   /* bump this up if you want even larger */
   font-weight: 300;
   opacity: 1;
   margin-top: 0.45rem;
   margin-bottom: 1.3rem;
-  color: #6b7280;
+  color: #8b5e3c;       /* same warm brown as links */
 }
 
 /* Paragraph */
 p {
   margin: 0 0 1.2rem 0;
-  max-width: 52ch;
+  max-width: 52ch;   /* keeps lines readable + centered */
 }
 
 /* Icons */
@@ -105,7 +106,7 @@ p {
 }
 
 .icons a:hover {
-  color: #c26a2e;          /* same warm hover as links */
+  color: #c26a2e;      /* same hover warmth */
 }
 
 /* GitHub Pages background safety */
