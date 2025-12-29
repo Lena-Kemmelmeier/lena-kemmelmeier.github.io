@@ -6,15 +6,7 @@ html, body {
   background-color: #f3efe9;
   margin: 0;
   padding: 0;
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: #1565c0;
-}
-a:hover {
-  color: #217ee7;
+  color: #1f2933;
 }
 
 /* Centered content */
@@ -38,17 +30,6 @@ a:hover {
   align-items: center;
 }
 
-/* Avatar 
-.avatar {
-  width: 180px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin: 0 0 1.25rem 0;
-}
-*/
-
 .avatar {
   width: 200px;
   /* height: 220px;      /* must match width */
@@ -69,6 +50,7 @@ h1.name {
   text-align: center;
   /* keep on one line when there’s room */
   white-space: nowrap;
+  color: #1f2933;
 }
 
 /* On small screens, allow wrapping so it doesn't overflow */
@@ -81,9 +63,10 @@ h1.name {
 .pronouns {
   font-size: 1.35rem;   /* bump this up if you want even larger */
   font-weight: 300;
-  opacity: 0.7;
+  opacity: 1;
   margin-top: 0.45rem;
   margin-bottom: 1.3rem;
+  color: #6b7280;
 }
 
 /* Paragraph */
@@ -110,11 +93,11 @@ p {
 }
 
 .icons a {
-  color: black;
+  color: #1f2933;
 }
 
 .icons a:hover {
-  color: #1565c0;
+  color: #2f6f95;
 }
 
 /* GitHub Pages background safety */
