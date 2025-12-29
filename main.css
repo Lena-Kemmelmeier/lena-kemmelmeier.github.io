@@ -50,10 +50,10 @@ a:hover {
 */
 
 .avatar {
-  width: 220px;
+  width: 200px;
   /* height: 220px;      /* must match width */
   object-fit: cover;
-  border-radius: 40%; /* makes it circular */
+  border-radius: 20%; /* makes it circular */
   display: block;
   margin: 0 auto 1rem auto;
 }
