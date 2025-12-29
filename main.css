@@ -53,7 +53,7 @@ a:hover {
   width: 220px;
   /* height: 220px;      /* must match width */
   object-fit: cover;
-  border-radius: 30%; /* makes it circular */
+  border-radius: 40%; /* makes it circular */
   display: block;
   margin: 0 auto 1rem auto;
 }
