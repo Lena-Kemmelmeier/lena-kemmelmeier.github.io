@@ -3,7 +3,7 @@ html, body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.05rem;
   font-weight: 300;
-  background-color: #daeaf2;
+  background-color: #f3efe9;
   margin: 0;
   padding: 0;
 }
@@ -129,5 +129,5 @@ footer,
 .page-content,
 .site,
 .site-content {
-  background-color: #daeaf2 !important;
+  background-color: #f3efe9 !important;
 }
